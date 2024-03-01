@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-Info</title>
+</head>
+<body>
+    <h1>Contact Query</h1>
+    <ul style="list-style-type: none;">
+        {% for item in contact %}
+            <li><b>First Name:</b> {{item.firstName}}</li>
+            <li><b>Last Name:</b> {{item.lastName}}</li>
+            <li><b>email:</b> {{item.email}}</li>
+            <br/>
+            <li><b>Phone Number: </b>{{item.phoneNumber}}</li>
+            <li><b>Message:</b>{{item.message|linebreaks}}</li>
+            <hr />
+                     
+        {% endfor %}
+    </ul>
+
+        
+</body>
+</html>
